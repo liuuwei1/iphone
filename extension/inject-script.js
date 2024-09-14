@@ -1,0 +1,1 @@
+(function(b){var d=b.pushState;b.pushState=function(f,j,c){if(typeof b.onpushstate=="function")b.onpushstate({state:f});return c=c&&c.search(/^http/)>-1?c:"",window.postMessage({action:"doFroApplePages",url:c},"*"),d.apply(b,arguments)},console.log(b.pushState)})(history);
